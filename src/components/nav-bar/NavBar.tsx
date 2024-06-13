@@ -26,28 +26,44 @@ export default function NavBar() {
         Shorty
       </a>
       {menuOpen ? (
-        <button className={styles.menuBtn} onClick={() => toggleMenu("close")}>
+        <button
+          className={styles.menuBtn}
+          onClick={() => toggleMenu("close")}
+          aria-expanded="true"
+          aria-label="Close menu">
           <FontAwesomeIcon icon={faXmark} size="xl" />
         </button>
       ) : (
-        <button className={styles.menuBtn} onClick={() => toggleMenu("open")}>
+        <button
+          className={styles.menuBtn}
+          onClick={() => toggleMenu("open")}
+          aria-expanded="false"
+          aria-label="Open menu">
           <FontAwesomeIcon icon={faBars} size="xl" />
         </button>
       )}
       <div
         className={`${styles.navContainer} ${
           menuOpen && styles.mobileNavOpen
-        } ${menuOpenFinished && styles.mobileNavZ}`}>
+        } ${menuOpenFinished && styles.mobileNavZ}`}
+        role="navigation"
+        aria-label="Main navigation">
         <nav>
-          <ul>
-            <li>
-              <a href="#">Features</a>
+          <ul role="menubar">
+            <li role="none">
+              <a href="#" role="menuitem">
+                Features
+              </a>
             </li>
-            <li>
-              <a href="#">Pricing</a>
+            <li role="none">
+              <a href="#" role="menuitem">
+                Pricing
+              </a>
             </li>
-            <li>
-              <a href="#">Resources</a>
+            <li role="none">
+              <a href="#" role="menuitem">
+                Resources
+              </a>
             </li>
           </ul>
         </nav>
