@@ -10,12 +10,12 @@ $very-dark-violet: hsl(260, 8%, 14%);
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 
-$width-md: 700px;
-$width-sm: 450px;
+// screen width break points
+$width-md: 650px;
 
+// screen gutters
 $gutter-md: 40px;
 $gutter-sm: 20px;
-$gutter-xs: 10px;
 
 // *** mix-ins *** //
 @mixin btn(
@@ -34,12 +34,11 @@ $gutter-xs: 10px;
   background-color: $bg;
   border: none;
   border-radius: $rad;
-  transition: all 300ms;
+  transition: opacity 200ms ease;
 
   &:hover,
   &:focus {
-    opacity: 0.8;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+    opacity: 0.7;
   }
 }
 
@@ -47,7 +46,7 @@ $gutter-xs: 10px;
   color: $color;
   font-size: 16px;
   font-weight: 500;
-  transition: color 300ms ease;
+  transition: color 200ms ease;
 
   &:hover,
   &:focus {
