@@ -12,7 +12,45 @@ $black: hsl(0, 0%, 0%);
 
 $width-md: 700px;
 $width-sm: 450px;
-$width-xs: 400px;
 
 $gutter-md: 40px;
 $gutter-sm: 20px;
+$gutter-xs: 10px;
+
+// *** mix-ins *** //
+@mixin btn(
+  $w,
+  $h,
+  $fontSize: 16px,
+  $color: $white,
+  $bg: $cyan,
+  $rad: calc($w / 2)
+) {
+  width: $w;
+  height: $h;
+  font-size: $fontSize;
+  font-weight: 700;
+  color: $color;
+  background-color: $bg;
+  border: none;
+  border-radius: $rad;
+  transition: all 300ms;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+  }
+}
+
+@mixin link($hoverColor: $cyan, $color: $grayish-violet) {
+  color: $color;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 300ms ease;
+
+  &:hover,
+  &:focus {
+    color: $hoverColor;
+  }
+}
