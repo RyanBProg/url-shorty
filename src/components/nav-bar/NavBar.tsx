@@ -21,7 +21,7 @@ export default function NavBar() {
   };
 
   return (
-    <header>
+    <header className={styles.header}>
       <a href="#" className={styles.headerLogo}>
         Shorty
       </a>
