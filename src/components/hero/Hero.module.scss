@@ -1,1 +1,81 @@
 @use "../../styles/global";
+
+.hero {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 40px;
+  padding: 0 global.$gutter-sm;
+  max-width: 850px;
+
+  @media (min-width: global.$width-md) {
+    flex-direction: row;
+    padding: global.$gutter-md;
+    justify-content: start;
+    gap: 0;
+  }
+
+  & div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-width: 345px;
+    text-align: center;
+
+    @media (min-width: global.$width-md) {
+      text-align: left;
+      align-items: flex-start;
+      min-width: 280px;
+    }
+
+    @media (min-width: global.$width-lg) {
+      min-width: 360px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      text-align: inherit;
+    }
+
+    p {
+      color: global.$grayish-violet;
+      text-align: inherit;
+    }
+
+    button {
+      margin-top: 15px;
+      @include global.btn(150px, 40px);
+    }
+  }
+
+  & div:last-child {
+    min-width: 430px;
+    z-index: -99;
+
+    @media (min-width: global.$width-md) {
+    }
+
+    img {
+      margin-left: auto;
+      margin-right: -70px;
+
+      @media (min-width: global.$width-md) {
+        position: absolute;
+        margin-right: auto;
+        right: -120px;
+        top: 50px;
+        height: 300px;
+      }
+
+      @media (min-width: global.$width-lg) {
+        right: -150px;
+        top: 0;
+        height: 370px;
+      }
+    }
+  }
+}
