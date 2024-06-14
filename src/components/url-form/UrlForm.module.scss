@@ -1,1 +1,68 @@
 @use "../../styles/global";
+
+.urlForm {
+  margin-top: 200px;
+  padding: 0 global.$gutter-sm;
+  background-color: global.$gray;
+
+  @media (min-width: global.$width-md) {
+    margin-top: 120px;
+    padding: 0 global.$gutter-md;
+  }
+
+  @media (min-width: global.$width-lg) {
+    margin-top: 160px;
+  }
+
+  form {
+    position: relative;
+    margin: auto auto;
+    top: -100px;
+    padding: 40px;
+    max-width: 770px;
+    background-color: global.$dark-violet;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+
+    @media (min-width: global.$width-md) {
+      flex-direction: row;
+      top: -65px;
+    }
+
+    input {
+      height: 50px;
+      width: 100%;
+      padding-left: 15px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      @include global.btn(100%, 50px, 20px, global.$white, global.$cyan, 5px);
+
+      @media (min-width: global.$width-md) {
+        width: 200px;
+        font-size: 18px;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 5px;
+      display: none;
+
+      @media (min-width: global.$width-md) {
+        top: auto;
+        bottom: 8px;
+      }
+
+      i {
+        font-size: 14px;
+        color: global.$red;
+        font-style: italic;
+      }
+    }
+  }
+}
