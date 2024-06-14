@@ -48,16 +48,17 @@
 
     button {
       margin-top: 15px;
-      @include global.btn(150px, 40px);
+      @include global.btn(200px, 60px, 20px);
+
+      @media (min-width: global.$width-md) {
+        @include global.btn(150px, 40px);
+      }
     }
   }
 
   & div:last-child {
     min-width: 430px;
     z-index: -99;
-
-    @media (min-width: global.$width-md) {
-    }
 
     img {
       margin-left: auto;
