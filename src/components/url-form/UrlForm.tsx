@@ -1,3 +1,4 @@
+import LinkResult from "../link-result/LinkResult";
 import styles from "./UrlForm.module.scss";
 
 export default function UrlForm() {
@@ -10,6 +11,10 @@ export default function UrlForm() {
           <i>Please add a link</i>
         </span>
       </form>
+      <ul role="list">
+        <LinkResult />
+        <LinkResult />
+      </ul>
     </section>
   );
 }

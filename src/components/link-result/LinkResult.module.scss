@@ -1,0 +1,66 @@
+@use "../../styles/global";
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  background-color: global.$white;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+
+  @media (min-width: global.$width-md) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & p:first-of-type {
+    color: global.$dark-violet;
+    min-width: 0;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+    @media (min-width: global.$width-md) {
+      margin-right: 10px;
+      flex: 1 1;
+    }
+  }
+
+  & p:last-of-type {
+    font-size: 16px;
+    color: global.$cyan;
+  }
+
+  & .btnCopy {
+    @include global.btn(100%, 40px, 16px, global.$white, global.$cyan, 5px);
+    flex-shrink: 0;
+
+    @media (min-width: global.$width-md) {
+      width: 100px;
+    }
+  }
+
+  & .btnCopied {
+    @include global.btn(
+      100%,
+      40px,
+      16px,
+      global.$white,
+      global.$very-dark-violet,
+      5px
+    );
+
+    @media (min-width: global.$width-md) {
+      width: 100px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}

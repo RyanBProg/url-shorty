@@ -16,7 +16,7 @@
 
   form {
     position: relative;
-    margin: auto auto;
+    margin: 0 auto;
     top: -100px;
     padding: 40px;
     max-width: 770px;
@@ -63,6 +63,20 @@
         color: global.$red;
         font-style: italic;
       }
+    }
+  }
+
+  & ul {
+    position: relative;
+    margin: 0 auto;
+    top: -85px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 770px;
+
+    @media (min-width: global.$width-md) {
+      top: -50px;
     }
   }
 }
