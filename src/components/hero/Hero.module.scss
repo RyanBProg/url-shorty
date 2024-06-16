@@ -9,7 +9,7 @@
   flex-direction: column-reverse;
   gap: 40px;
   padding: 0 global.$gutter-sm;
-  max-width: 850px;
+  max-width: 980px;
 
   @media (min-width: global.$width-md) {
     flex-direction: row;

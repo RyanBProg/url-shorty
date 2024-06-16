@@ -4,6 +4,10 @@
   background-color: global.$light-gray;
   padding: 50px global.$gutter-sm 100px;
 
+  @media (min-width: global.$width-lg) {
+    padding: 50px global.$gutter-md 100px;
+  }
+
   & h2 {
     font-weight: 700;
     font-size: 2rem;
