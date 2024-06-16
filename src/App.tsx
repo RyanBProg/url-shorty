@@ -4,6 +4,7 @@ import Hero from "./components/hero/Hero";
 import UrlForm from "./components/url-form/UrlForm";
 import StatsBanner from "./components/stats-banner/StatsBanner";
 import CtaBanner from "./components/cta-banner/CtaBanner";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <UrlForm />
       <StatsBanner />
       <CtaBanner />
+      <Footer />
     </>
   );
 }

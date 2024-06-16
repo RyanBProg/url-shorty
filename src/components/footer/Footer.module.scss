@@ -1,0 +1,71 @@
+@use "../../styles/global";
+
+.footer {
+  background-color: global.$very-dark-violet;
+  padding: 50px global.$gutter-sm;
+}
+
+.footerContainer {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: global.$width-lg) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 50px global.$gutter-md;
+    gap: 50px;
+  }
+
+  & h2 {
+    @include global.link(global.$cyan, global.$white);
+    font-size: 1.75rem;
+    font-weight: 700;
+
+    @media (min-width: global.$width-lg) {
+      flex-grow: 1;
+    }
+  }
+
+  & .linkList {
+    & h3 {
+      color: global.$white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+
+      @media (min-width: global.$width-lg) {
+        text-align: left;
+      }
+    }
+
+    & ul {
+      color: global.$gray;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & li {
+        text-align: center;
+
+        @media (min-width: global.$width-lg) {
+          text-align: left;
+        }
+
+        a {
+          @include global.link(global.$white, global.$gray);
+        }
+      }
+    }
+  }
+
+  & .socialContainer {
+    display: flex;
+    gap: 15px;
+  }
+}
