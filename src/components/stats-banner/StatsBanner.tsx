@@ -8,7 +8,7 @@ export default function StatsBanner() {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <div className={styles.cardsContiner}>
+      <div className={styles.cardsContainer}>
         <div className={styles.card}>
           <div className={styles.icon}>
             <img
@@ -48,6 +48,7 @@ export default function StatsBanner() {
             customizable links, supercharging audience engagement.
           </p>
         </div>
+        <hr />
       </div>
     </section>
   );

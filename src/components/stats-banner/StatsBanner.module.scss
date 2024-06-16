@@ -1,11 +1,110 @@
 @use "../../styles/global";
 
 .banner {
-  background-color: global.$gray;
+  background-color: global.$light-gray;
+  padding: 50px global.$gutter-sm 100px;
 
   & h2 {
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
+  }
+
+  & > p {
+    margin: 0 auto;
+    color: global.$grayish-violet;
+    text-align: center;
+    max-width: 600px;
+  }
+
+  & .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    max-width: 900px;
+    margin: 80px auto 0;
+    position: relative;
+
+    @media (min-width: global.$width-lg) {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 25px;
+    }
+
+    & .card {
+      background-color: global.$white;
+      padding: 30px 15px;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      z-index: 10;
+
+      & .icon {
+        background-color: global.$dark-violet;
+        border-radius: 50%;
+        width: 75px;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -35px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: global.$width-lg) {
+          left: 30px;
+          right: auto;
+        }
+      }
+
+      & h3 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: 40px;
+        text-align: center;
+
+        @media (min-width: global.$width-lg) {
+          text-align: left;
+          font-size: 20px;
+        }
+      }
+
+      & p {
+        text-align: center;
+        color: global.$grayish-violet;
+
+        @media (min-width: global.$width-lg) {
+          text-align: left;
+          font-size: 16px;
+        }
+      }
+    }
+
+    & .card:nth-child(2) {
+      top: 30px;
+    }
+
+    & .card:nth-child(3) {
+      top: 60px;
+    }
+
+    & hr {
+      position: absolute;
+      border: none;
+      background-color: global.$cyan;
+      height: 100%;
+      width: 5px;
+
+      @media (min-width: global.$width-lg) {
+        top: 50%;
+        height: 5px;
+        width: 100%;
+      }
+    }
   }
 }
