@@ -2,10 +2,10 @@
 
 .banner {
   background-color: global.$light-gray;
-  padding: 50px global.$gutter-sm 100px;
+  padding: 50px global.$gutter-sm 150px;
 
   @media (min-width: global.$width-lg) {
-    padding: 50px global.$gutter-md 100px;
+    padding: 50px global.$gutter-md 150px;
   }
 
   & h2 {

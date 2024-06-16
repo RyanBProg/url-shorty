@@ -1,0 +1,28 @@
+@use "../../styles/global";
+
+.ctaBanner {
+  padding: 50px global.$gutter-sm;
+  background-color: global.$dark-violet;
+
+  @media (min-width: global.$width-md) {
+    padding: 50px global.$gutter-md;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: global.$white;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  & button {
+    display: block;
+    margin: 0 auto;
+    @include global.btn(200px, 60px, 20px);
+
+    @media (min-width: global.$width-md) {
+      @include global.btn(150px, 40px);
+    }
+  }
+}
