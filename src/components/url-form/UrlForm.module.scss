@@ -20,6 +20,9 @@
     top: -100px;
     padding: 20px;
     max-width: 900px;
+    background-image: url(/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
     background-color: global.$dark-violet;
     display: flex;
     flex-direction: column;
@@ -30,6 +33,7 @@
       flex-direction: row;
       top: -65px;
       padding: 40px;
+      background-image: url(/images/bg-shorten-desktop.svg);
     }
 
     input {

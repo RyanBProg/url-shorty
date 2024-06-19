@@ -2,10 +2,14 @@
 
 .ctaBanner {
   padding: 50px global.$gutter-sm;
+  background-image: url(/images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
   background-color: global.$dark-violet;
 
   @media (min-width: global.$width-md) {
     padding: 50px global.$gutter-md;
+    background-image: url(/images/bg-boost-desktop.svg);
   }
 
   & h2 {
