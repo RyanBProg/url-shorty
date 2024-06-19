@@ -2,7 +2,7 @@
 
 .banner {
   background-color: global.$light-gray;
-  padding: 50px global.$gutter-sm 150px;
+  padding: 0 global.$gutter-sm 150px;
 
   @media (min-width: global.$width-lg) {
     padding: 50px global.$gutter-md 150px;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
     max-width: 900px;
     margin: 80px auto 0;
     position: relative;
