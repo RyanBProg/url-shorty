@@ -1,7 +1,13 @@
 import LinkResult from "../link-result/LinkResult";
 import styles from "./UrlForm.module.scss";
+import { Link } from "../../utils/types";
 
-export default function UrlForm() {
+type Props = {
+  links: Link[];
+  setLinks: React.Dispatch<React.SetStateAction<Link[]>>;
+};
+
+export default function UrlForm({ links, setLinks }: Props) {
   return (
     <section className={styles.urlForm}>
       <form action="">
@@ -12,8 +18,9 @@ export default function UrlForm() {
         </span>
       </form>
       <ul role="list">
-        <LinkResult />
-        <LinkResult />
+        {links.map((link, index) => {
+          return <LinkResult link={link} key={index} />;
+        })}
       </ul>
     </section>
   );

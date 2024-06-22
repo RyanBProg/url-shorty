@@ -1,18 +1,29 @@
+import { Link } from "../../utils/types";
 import styles from "./LinkResult.module.scss";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
-export default function LinkResult() {
+type Props = {
+  link: Link;
+};
+
+export default function LinkResult({ link }: Props) {
   const [btnText, setBtnText] = useState("Copy");
+  const copyTextRef = useRef<HTMLParagraphElement>(null);
+
+  const copyToClipboard = () => {
+    if (copyTextRef.current) {
+      const text = copyTextRef.current.innerText;
+      navigator.clipboard.writeText(text).then(() => setBtnText("Copied"));
+    }
+  };
 
   return (
     <div className={styles.link} role="listitem">
-      <p>https://www.google.com/images</p>
-      <p>https://rel.link/gjo345</p>
+      <p>{link.link}</p>
+      <p ref={copyTextRef}>{link.shortLink}</p>
       <button
         className={btnText === "Copy" ? styles.btnCopy : styles.btnCopied}
-        onClick={() => {
-          setBtnText("Copied");
-        }}>
+        onClick={copyToClipboard}>
         {btnText}
       </button>
     </div>
