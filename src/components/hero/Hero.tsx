@@ -9,10 +9,13 @@ export default function Hero() {
           Build your brand's recognition and get detailed insights on how your
           links are performing
         </p>
-        <button>Get Started</button>
+        <button aria-label="go to subscription pricing">Get Started</button>
       </div>
       <div>
-        <img src="/images/illustration-working.svg" alt="background image" />
+        <img
+          src="/images/illustration-working.svg"
+          alt="illustration of a person working at a desk"
+        />
       </div>
     </section>
   );
